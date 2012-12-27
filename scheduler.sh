@@ -14,6 +14,7 @@ if [ $ACTIVEPERL != "/home/chenry/perl5/perlbrew/perls/perl-5.16.0/bin/perl" ]; 
 	if [ -e "/home/chenry/perl5/perlbrew/etc/bashrc" ]; then
 		echo "Sourcing perlbrew!"
 		source /home/chenry/perl5/perlbrew/etc/bashrc
+		echo `which perl`
 	fi 
 fi
 source $SCRIPT_DIR/user-env.sh
