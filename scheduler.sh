@@ -9,6 +9,13 @@ set_script_dir () {
 	popd  > /dev/null
 }
 set_script_dir
+ACTIVEPERL=`which perl`
+if [ $ACTIVEPERL != "/home/chenry/perl5/perlbrew/perls/perl-5.16.0/bin/perl" ]; then
+	if [ -e "/home/chenry/perl5/perlbrew/etc/bashrc" ]; then
+		echo "Sourcing perlbrew!"
+		source /home/chenry/perl5/perlbrew/etc/bashrc
+	fi 
+fi
 source $SCRIPT_DIR/user-env.sh
 set_script_dir
 perl $SCRIPT_DIR/../KBaseFBAModeling/scripts/KBaseFBAScheduler.pl $SCRIPT_DIR "$@"

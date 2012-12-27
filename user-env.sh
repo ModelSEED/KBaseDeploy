@@ -17,12 +17,6 @@ set_script_dir () {
 	SCRIPT_DIR=`pwd`;
 	popd  > /dev/null
 }
-ACTIVEPERL=`which perl`
-if [ $ACTIVEPERL != "~/perl5/perlbrew/perls/perl-5.16.0/bin/perl" ]; then
-	if [ -e "~/perl5/perlbrew/etc/bashrc" ]; then
-		source ~/perl5/perlbrew/etc/bashrc
-	fi 
-fi
 ARCHNAME=`perl -V:archname`
 ARCHNAME=`echo $ARCHNAME | awk '{ print substr( $0, 11,length($0)-12 ) }'`
 set_script_dir
