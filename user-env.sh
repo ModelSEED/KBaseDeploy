@@ -29,6 +29,7 @@ env_push PERL5LIB $SCRIPT_DIR/../idserver/lib
 env_push PERL5LIB $SCRIPT_DIR/../cluster_service/client/perl/Bio-KBase-ClusterService-0.02/lib
 env_push PERL5LIB $SCRIPT_DIR/../KBaseFBAModeling/lib
 env_push PERL5LIB $SCRIPT_DIR/../workspace_service/lib
+env_push PERL5LIB $SCRIPT_DIR/../MSSeedSupportServer/lib
 export PERL5LIB
 source $SCRIPT_DIR/../KBaseClient/user-env.sh
 set_script_dir
